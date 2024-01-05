@@ -1,7 +1,7 @@
 ### Projekta uzdevums: ###
 Projektam izvēlēts aktuāls mājsaimniecības jautājums - gāzes pakalpojumu sniedzēja izvēle. Pirmkārt, jāapkopo ziņas par gāzes patēriņu pēdējā gada laikā. Otrkārt, jānoskaidro gāzes vidējais mēneša patēriņš gada griezumā. Treškārt, gāzes vidējais mēneša patēriņš jāievada gāzes pakalpojumu sniedzēju mājas lapu mēneša maksas kalkulatoros. Ceturtkārt, iegūtie rezultāti jāsaglabā _ _Excel_ _ datnē.
 
-### Nepieciešamās __Python__ bibliotēkas: ###
+### Nepieciešamās _ _Python_ _ bibliotēkas: ###
 Projekta izpildei nepieciešamas semestra nodarbību gaitā apskatītās bibliotēkas. 
 1. __PyPDF2__ bibliotēka, kas ļauj strādāt ar PDF failiem un ļauj izgūt no tiem nepieciešamo informāciju.
 2. __OS__ bibliotēka, kas ļauj strādāt ar operētājsistēmas struktūru - irektorijām un failiem.

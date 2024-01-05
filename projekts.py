@@ -11,19 +11,26 @@ for i in range(0,skaits):
     nosaukumi.append(filename)
 print(nosaukumi)
 
-
-for i in range(0, 2):
-    row=[]
+row=[]
+for i in range(0, skaits):
     pdf_file=PyPDF2.PdfReader(open(nosaukumi[i],"rb"))
     number_of_pages=len(pdf_file.pages)
     page1=pdf_file.pages[0]
     page2=pdf_file.pages[1]
     text1=page1.extract_text()
     text2=page2.extract_text()
+    
+    if "INFORMĀCIJA PAR DABASGĀZES PATĒRIŅU" in text1:
+        vieta1 = text1.find("A003438301")
+        paterins = text1[vieta1+11:vieta1+15]
+        paterins = paterins.replace(" ", "")
+        row.append(paterins)
 
-    vieta1 = text1.find("A003438301")
-    paterins = text1[vieta1+11:vieta1+16]
-    paterins = paterins.replace(" ", "")
-    row.append(paterins)
-    print(row)
+    # else:
+    #     vieta2 = text2.find("A003438301")
+    #     paterins = text2[vieta2+11:vieta2+15]
+    #     paterins = paterins.replace(" ", "")
+    #     row.append(paterins)
+
+print(row)
 exit()
