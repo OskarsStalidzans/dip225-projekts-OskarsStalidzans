@@ -1,5 +1,12 @@
 import PyPDF2
 import os
+import openpyxl
+import selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+import time
+from openpyxl import Workbook, load_workbook 
 
 videjais_paterins=0
 
@@ -35,6 +42,61 @@ for i in range(0,skaits):
 
 videjais_paterins = (sum(menesa_paterins))/skaits
 videjais_paterins = round(videjais_paterins)
-print(videjais_paterins)
+
+service = Service()
+option = webdriver.ChromeOptions()
+driver = webdriver.Chrome(service=service, options=option)
+
+tarifu_nosaukumi = ['Elektrum', 'Elenger', 'Latvijas Gāze']
+tarifi = []
+
+url = "https://www.elektrum.lv/lv/majai/elektrum-dabasgaze/dabasgazes-produkti/piemerotaka-produkta-kalkulators/"
+driver.get(url)
+time.sleep(1)
+button = driver.find_element(By.ID, "ccc-notify-accept")
+button.click()
+find = driver.find_element(By.ID, "consumption-cubic")
+find.clear()
+find.send_keys(videjais_paterins)
+button = driver.find_element(By.CLASS_NAME, "has-loader")
+button.click()
+time.sleep(2)
+find = driver.find_element(By.CLASS_NAME, "major")
+major = find.text
+find = driver.find_element(By.CLASS_NAME, "minor")
+minor = find.text
+the_number = major + "." + minor
+the_number = float(the_number)
+tarifi.append(the_number)
+
+url = "https://elenger.lv/majai/dabasgaze/#dabasgazes-kalkulators"
+driver.get(url)
+time.sleep(1)
+find = driver.find_element(By.ID, "monthly_consumption_m3")
+find.clear()
+find.send_keys(videjais_paterins)
+time.sleep(1)
+find = driver.find_element(By.ID, "flexible_total")
+the_number = find.text
+the_number = float(the_number)
+tarifi.append(the_number)
+
+url = "https://lg.lv/majoklim/produkti"
+driver.get(url)
+find = driver.find_element(By.CLASS_NAME, "form-control")
+find.clear()
+find.send_keys(videjais_paterins)
+button = driver.find_element(By.CLASS_NAME, "btn--primary")
+button.click()
+time.sleep(1)
+find = driver.find_element(By.CLASS_NAME, "calc-product-price")
+the_number = find.text
+the_number = the_number.replace(",", ".")
+the_number = float(the_number)
+tarifi.append(the_number)
+
+
+print(tarifu_nosaukumi)
+print(tarifi)
 
 exit()
