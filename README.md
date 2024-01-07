@@ -6,7 +6,7 @@ Latvijā ar dabasgāzes tirdzniecību mājsaimniecībām nodarbojas uzņēmumi _
 ### Nepieciešamās _ _Python_ _ bibliotēkas: ###
 Projekta izpildei nepieciešamas semestra nodarbību gaitā apskatītās bibliotēkas. 
 1. __PyPDF2__ bibliotēka, kas ļauj strādāt ar PDF failiem un ļauj izgūt no tiem nepieciešamo informāciju.
-2. __OS__ bibliotēka, kas ļauj strādāt ar operētājsistēmas struktūru - irektorijām un failiem.
+2. __OS__ bibliotēka, kas ļauj strādāt ar operētājsistēmas struktūru - direktorijām un failiem.
 3. __Selenium__ bibliotēka, ar kuras palīdzību tīmekļa lapās ievadīt un izgūt informāciju. 
 4. __Time__ bibliotēka laika menedmentam, kas, strādājot ar tīmekļa lapām, nodrošina, ka lapa paspēj ielādēties.
 4. __Openpyxl__ bibliotēka, lai izveidotu _ _Excel_ _ datni ar projekta izpildes rezultātiem.
