@@ -99,4 +99,16 @@ tarifi.append(the_number)
 print(tarifu_nosaukumi)
 print(tarifi)
 
+def create_workbook(path):
+    workbook = Workbook()
+    sheet = workbook.active
+    for i in range (0, len(tarifu_nosaukumi)):
+        sheet["A" + str(i+1)] = tarifu_nosaukumi[i]
+    for i in range (0, len(tarifi)):
+        sheet["B" + str(i+1)] = tarifi[i]
+    workbook.save(path)
+
+if __name__ == "__main__":
+    create_workbook("elektribas_tarifu_piedavajumi.xlsx")
+
 exit()
