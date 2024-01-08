@@ -1,9 +1,9 @@
 ### Projekta uzdevums: ###
 Projektam izvēlēts aktuāls mājsaimniecības jautājums - dabasgāzes pakalpojumu sniedzēja izvēle. Jāapkopo ziņas par dabasgāzes patēriņu pēdējā gada laikā, jānoskaidro gāzes vidējais mēneša patēriņš gada griezumā. Dabasgāzes vidējais mēneša patēriņš jāievada gāzes pakalpojumu tīmekļa lapu mēneša maksas kalkulatoros, un katra pakalpojumu sniedzēja izdevīgākā tarifu summa jāsaglabā.
 Informācija par dabasgāzes patēriņu gada laikā apkopota saņemtajos rēķinos PDF formātā. No tiem jāizdala dabasgāzes patēriņa apjoms kubikmetros attiecīgajā mēnesī. Tas atrodams sadaļā "SADALES SISTĒMAS OPERATORA AS “GASO” INFORMĀCIJA PAR DABASGĀZES PATĒRIŅU". Saskaitot šo apjomu un izdalot to ar mēnešu skaitu, iegūst vidējo mēneša dabasgāzes patēriņu kubikmetros, kuru noapaļo līdz veselam skaitlim.
-Latvijā ar dabasgāzes tirdzniecību mājsaimniecībām nodarbojas uzņēmumi _Latvijas Gāze_, _Elektrum_ un _Elenger_. Šo uzņēmumu tīmekļa lapās pieejami kalkulatori, kas aprēķina eventuālo vidējo mēneša maksu par dabasgāzi, balstoties uz vidējo mēneša patēriņu. Tādēļ dabasgāzes vidējo mēneša patēriņa skaitli jāievada šajos kalkulatoros un jāizgūst dabasgāzes tirgotāja izdevīgākais piedāvājums, kas tiek piedāvāts kā pirmais uzskaitījumā. Iegūtie dati jāsaglabā _ _Excel_ _ datnē.
+Latvijā ar dabasgāzes tirdzniecību mājsaimniecībām nodarbojas uzņēmumi _Latvijas Gāze_, _Elektrum_ un _Elenger_. Šo uzņēmumu tīmekļa lapās pieejami kalkulatori, kas aprēķina eventuālo vidējo mēneša maksu par dabasgāzi, balstoties uz vidējo mēneša patēriņu. Tādēļ dabasgāzes vidējo mēneša patēriņa skaitli jāievada šajos kalkulatoros un jāizgūst dabasgāzes tirgotāja izdevīgākais piedāvājums, kas tiek piedāvāts kā pirmais uzskaitījumā. Iegūtie dati jāsaglabā _Excel_ datnē.
 
-### Nepieciešamās _ _Python_ _ bibliotēkas: ###
+### Nepieciešamās _Python_ bibliotēkas: ###
 Projekta izpildei nepieciešamas semestra nodarbību gaitā apskatītās bibliotēkas. 
 1. __PyPDF2__ bibliotēka, kas ļauj strādāt ar PDF failiem un ļauj izgūt no tiem nepieciešamo informāciju.
 2. __OS__ bibliotēka, kas ļauj strādāt ar operētājsistēmas struktūru - direktorijām un failiem.
